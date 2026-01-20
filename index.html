@@ -1,9 +1,424 @@
-onlybrokers/
-├─ index.html          ← авто-редирект (RU / EN / GEO)
-├─ phuket-ru/
-│  └─ index.html
-├─ phuket-en/
-│  └─ index.html
-├─ assets/
-│  ├─ css/
-│  └─ img/
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ONLYBROKERS: Недвижимость Таиланда и ОАЭ</title>
+  
+  <!-- Шрифт Inter для читабельности -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Сброс стилей и базовые настройки */
+    * { box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a; /* Темный фон */
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #334155;
+    }
+
+    /* Имитация мобильного экрана */
+    .mobile-container {
+      width: 100%;
+      max-width: 480px; 
+      background: #ffffff;
+      min-height: 100vh;
+      padding: 25px 20px;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    @media (min-width: 481px) {
+      .mobile-container {
+        min-height: auto;
+        border-radius: 24px;
+        margin: 20px 0;
+      }
+    }
+
+    /* Бейдж */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #DEF7EC;
+      color: #03543F;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: pulse-green 2s infinite;
+    }
+
+    /* Заголовки */
+    h1 {
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 900;
+      margin: 0 0 10px 0;
+      color: #1e293b;
+    }
+
+    .highlight {
+      color: #0ea5a4; /* Цвет бренда */
+    }
+
+    .sub-highlight {
+      color: #d97706; /* Оранжевый акцент */
+      white-space: nowrap;
+      background: #fffbeb;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+
+    /* Видео контейнер (9:16 Вертикальное) */
+    .video-frame {
+      position: relative;
+      width: 100%;
+      padding-bottom: 177.77%; 
+      background: #000;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+.video-wrapper {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 720px; /* Shorts формат 9:16 */
+  border-radius: 16px;
+}
+
+.sound-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.08); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+    .video-frame iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Блок преимуществ проекта */
+    .project-features {
+      background: #f0fdf4; /* Зеленоватый фон (Эко) */
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #166534;
+    }
+    
+    .feature-item span {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    /* Блок Расчет прибыли */
+    .commission-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .commission-box h3 {
+      margin-top: 0;
+      color: #0f172a;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .commission-step {
+      margin-bottom: 15px;
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 10px;
+    }
+
+    /* Убираем черту у последнего элемента списка, если их несколько */
+    .commission-step:nth-last-of-type(1) {
+      border-bottom: none;
+      margin-bottom: 15px; /* отступ до зеленого блока */
+      padding-bottom: 0;
+    }
+
+    .income-highlight {
+      display: block;
+      font-weight: 800;
+      color: #16a34a; /* Зеленый цвет денег */
+      margin-top: 5px;
+      font-size: 17px;
+    }
+
+    /* Таймер */
+    .timer-alert {
+      background: #FFFBEB;
+      border: 1px solid #FCD34D;
+      color: #92400E;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Кнопки */
+    .cta-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      transition: transform 0.1s;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-button:active {
+      transform: scale(0.98);
+    }
+
+    .btn-main {
+      background: linear-gradient(to right, #0ea5a4, #0891b2);
+      color: white;
+      animation: pulse 2s infinite;
+      border: 1px solid transparent;
+    }
+
+    .btn-tg {
+      background: #ffffff;
+      color: #24A1DE;
+      border: 2px solid #24A1DE;
+    }
+
+    /* Подвал */
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #94a3b8;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(14, 165, 164, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(14, 165, 164, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(14, 165, 164, 0); }
+    }
+
+    @keyframes pulse-green {
+      0% { opacity: 1; }
+      50% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+  </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+  <div class="mobile-container">
+    
+    <!-- Бейдж -->
+    <div style="text-align: center;">
+      <div class="badge">
+        <span></span> Регистрация открыта
+      </div>
+    </div>
+
+    <!-- Заголовок -->
+    <h1>
+      Зарабатывай на недвижимости <span class="highlight">Таиланда 🇹🇭 и ОАЭ 🇦🇪</span>
+    </h1>
+
+    <p class="subtitle">
+      Стань партнером <strong>ONLYBROKERS</strong>.<br>
+      Пхукет (Layan Beach) • Дубай • <span class="sub-highlight">Вложений: 0$</span>
+    </p>
+
+    <!-- Блок преимуществ нового проекта (Пхукет) -->
+    <div class="project-features">
+      <div style="font-weight:800; color:#0f172a; margin-bottom:10px;">🔥 Сейчас продают этот проект:</div>
+      <div class="feature-item"><span>🌊</span> 800м до пляжа Лаян (Премиум)</div>
+      <div class="feature-item"><span>🌿</span> ЭКО-комплекс + Умный дом</div>
+      <div class="feature-item"><span>📈</span> Старт продаж (Самые низкие цены)</div>
+      <div class="feature-item"><span>💰</span> Рассрочка для клиентов</div>
+    </div>
+
+    <!-- Видео -->
+    <div class="video-wrapper">
+  <iframe
+    id="yt-video"
+    src="https://www.youtube.com/embed/aOuCXSmYkn8?autoplay=1&mute=1&controls=0&loop=1&playlist=aOuCXSmYkn8"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
+  <button id="sound-btn" class="sound-btn">
+    🔊 ВКЛЮЧИТЬ ЗВУК
+  </button>
+</div>
+
+
+    <!-- ОБНОВЛЕННАЯ Математика дохода -->
+    <div class="commission-box">
+      <h3>💸 Сколько ты заработаешь на Тае?</h3>
+      <p style="margin-top: 0; font-size: 14px; color: #64748b;">
+        Цены на квартиры в этом проекте стартуют от <strong>$200,000</strong> (6.7M THB).
+      </p>
+
+      <!-- Уровень 1 -->
+      <div class="commission-step">
+        <strong>1️⃣ Твоя прямая продажа (3%)</strong><br>
+        Ты нашел клиента в РФ/КЗ, который купил квартиру для сдачи в аренду или зимовки.
+        <span class="income-highlight">💰 Твой доход: $6,000</span>
+      </div>
+
+      <!-- Уровень 2 -->
+      <div class="commission-step">
+        <strong>2️⃣ Доход от команды - 1 уровень (1%)</strong><br>
+        Твой партнер продал квартиру. Ты ничего не делал.
+        <span class="income-highlight">💰 Твой пассив: $2,000</span>
+      </div>
+
+      <!-- Уровень 3 -->
+      <div class="commission-step">
+        <strong>3️⃣ Доход от команды - 2 уровень (1%)</strong><br>
+        Твой партнер продал квартиру. Ты ничего не делал.
+        <span class="income-highlight">💰 Твой пассив: $2,000</span>
+      </div>
+
+      <div style="background: #ecfdf5; padding: 10px; border-radius: 6px; font-size: 14px; margin-top: 10px;">
+        <strong>🚀 В чем выгода?</strong><br>
+        Спрос на Пхукет сейчас рекордный. Люди спасают деньги, покупая недвижимость. Помоги им и заработай.
+      </div>
+    </div>
+
+    <!-- Таймер -->
+    <div class="timer-alert">
+      ⏳ Доступ к базе застройщиков закроется через: <span id="timer">14:59</span>
+    </div>
+
+    <!-- Кнопки -->
+    <a href="https://onlybrokers.com/registration?ref=smanolii%40gmail.com" class="cta-button btn-main">
+      👉 Стать партнером (Бесплатно)
+    </a>
+
+    <a href="https://t.me/RU_5billionsales" target="_blank" class="cta-button btn-tg">
+      💬 Чат партнеров в Telegram
+    </a>
+
+    <div class="footer">
+      <p>ONLYBROKERS International.<br>
+      Пхукет • Дубай • Бали<br>
+      &copy; 2026 Все права защищены.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        var interval = setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = 0; 
+                clearInterval(interval);
+                display.textContent = "00:00";
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        var fifteenMinutes = 60 * 15,
+            display = document.querySelector('#timer');
+        startTimer(fifteenMinutes, display);
+    };
+  </script>
+  
+  <script>
+  document.getElementById("sound-btn").addEventListener("click", function () {
+    const iframe = document.getElementById("yt-video");
+
+    iframe.src = "https://www.youtube.com/embed/aOuCXSmYkn8?autoplay=1&mute=0&controls=1";
+
+    this.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
