@@ -97,11 +97,11 @@
       margin-bottom: 20px;
     }
 
-    /* Video Container ((9:16 Вертикальное)) */
-    .video-frame {
+    /* --- Video Styles (Fixed) --- */
+    .video-wrapper {
       position: relative;
       width: 100%;
-      padding-bottom: 177.77%; 
+      padding-bottom: 177.77%; /* 9:16 Aspect Ratio */
       background: #000;
       border-radius: 16px;
       overflow: hidden;
@@ -109,7 +109,7 @@
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
     }
 
-    .video-frame iframe {
+    .video-wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -118,7 +118,37 @@
       border: none;
     }
 
-    /* Project Features Block (Green/Eco Vibe) */
+    /* Sound Button Overlay */
+    .sound-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: 800;
+      border-radius: 50px;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      animation: pulse-btn 2s infinite;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    @keyframes pulse-btn {
+      0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+      70% { transform: translate(-50%, -50%) scale(1.05); box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+      100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+    }
+    /* --------------------------- */
+
+    /* Project Features Block */
     .project-features {
       background: #f0fdf4; 
       border: 1px solid #bbf7d0;
@@ -141,7 +171,7 @@
       font-size: 18px;
     }
 
-    /* Commission Box */
+    /* Commission Box (UPDATED) */
     .commission-box {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
@@ -246,7 +276,7 @@
       100% { opacity: 1; }
     }
   </style>
-</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 <body>
 
   <div class="mobile-container">
@@ -278,33 +308,42 @@
 
      <!-- Видео -->
     <div class="video-wrapper">
-  <iframe
-    id="yt-video"
-    src="https://www.youtube.com/embed/-IyBKpQavn4?autoplay=1&mute=1&controls=0&loop=1&playlist=-IyBKpQavn4"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
+      <iframe
+        id="yt-video"
+        src="https://www.youtube.com/embed/-IyBKpQavn4?autoplay=1&mute=1&controls=0&loop=1&playlist=-IyBKpQavn4&playsinline=1&rel=0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
 
-  <button id="sound-btn" class="sound-btn">
-    🔊 ВКЛЮЧИТЬ ЗВУК
-  </button>
-</div>
+      <button id="sound-btn" class="sound-btn">
+        🔊 TURN ON THE SOUND
+      </button>
+    </div>
 
-    <!-- Commission Calculation -->
+    <!-- Commission Calculation (UPDATED 3 LEVELS) -->
     <div class="commission-box">
       <h3>💸 How much can you earn?</h3>
       <p style="margin-top: 0; font-size: 14px; color: #64748b;">
         Based on a starting unit price of approx. <strong>$200,000</strong> (Phuket).
       </p>
 
+      <!-- Level 1 -->
       <div class="commission-step">
         <strong>1️⃣ Direct Sale (3%)</strong><br>
         You find a buyer for a studio or 1-bedroom unit.
         <span class="income-highlight">💰 Your Commission: $6,000</span>
       </div>
 
+      <!-- Level 2 -->
       <div class="commission-step">
-        <strong>2️⃣ Team Override (1%)</strong><br>
+        <strong>2️⃣ Team Override - Level 1 (1%)</strong><br>
+        Your referral makes a sale. You do nothing.
+        <span class="income-highlight">💰 Passive Income: $2,000</span>
+      </div>
+
+      <!-- Level 3 -->
+      <div class="commission-step">
+        <strong>3️⃣ Team Override - Level 2 (1%)</strong><br>
         Your referral makes a sale. You do nothing.
         <span class="income-highlight">💰 Passive Income: $2,000</span>
       </div>
@@ -338,6 +377,7 @@
   </div>
 
   <script>
+    /* Timer Logic */
     function startTimer(duration, display) {
         var timer = duration, minutes, seconds;
         var interval = setInterval(function () {
@@ -365,10 +405,12 @@
   </script>
   
    <script>
+  /* Sound Button Logic */
   document.getElementById("sound-btn").addEventListener("click", function () {
     const iframe = document.getElementById("yt-video");
 
-    iframe.src = "https://www.youtube.com/embed/aOuCXSmYkn8?autoplay=1&mute=0&controls=1";
+    // Вставьте сюда ID вашего видео вместо ВАШ_ID_ВИДЕО (два раза!)
+    iframe.src = "https://www.youtube.com/embed/-IyBKpQavn4?autoplay=1&mute=0&controls=1&loop=1&playlist=-IyBKpQavn4&playsinline=1&rel=0";
 
     this.style.display = "none";
   });
