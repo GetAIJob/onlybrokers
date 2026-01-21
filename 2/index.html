@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ONLYBROKERS — Зарабатывай 3–5% на недвижимости Пхукета без вложений!</title>
   <meta name="description" content="Стань партнером ONLYBROKERS и получай до 5% от сделок с элитной недвижимостью Пхукета. Полностью бесплатно, без звонков и контрактов. Первый проект — Layan Green Park!"/>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --primary: #00c853;
       --primary-dark: #00a041;
       --dark: #0d1b2a;
+      --gray: #f8f9fa;
       --text: #2d3436;
+      --accent: #ff6b35;
     }
 
     * {
@@ -38,4 +38,400 @@
     }
 
     header {
-      background: linear-g
+      background: linear-gradient(to right, var(--dark), #1b263b);
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://cdn.fazwaz.com/wbr/5E8l5Xn72Wu_2MBsRWb6XUpJiew/375x300/project/140596/swimming-pool.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 140px 20px 100px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto 2.5rem;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 36px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      margin: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,200,83,0.4);
+    }
+
+    .btn-telegram {
+      background: #0088cc;
+      color: white;
+    }
+
+    .btn-telegram:hover {
+      background: #006b9e;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--dark);
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .benefit-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .benefit-card .icon {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .calculator {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .calc-input {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 1.3rem;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .calc-result {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-align: center;
+      margin: 25px 0;
+      padding: 20px;
+      background: rgba(0,200,83,0.08);
+      border-radius: 16px;
+    }
+
+    .video-section {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+
+  min-height: 100vh;          /* ← ключ */
+  display: flex;
+  align-items: center;
+}
+
+
+   /* Контейнер видео */
+    .video-frame {
+      position: relative;
+      width: 100%;
+      
+          padding-bottom: 160%;  
+      
+      background: #000;
+      border-radius: 16px;
+      overflow: hidden; /* Это обрезает всё, что вылезет за края при зуме */
+      margin-bottom: 25px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      
+     
+      max-width: 420px; 
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .video-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-wrapper iframe {
+     width: 100%;
+     height: 100%;
+     border: none;
+
+     transform: scale(1.18);
+     transform-origin: center center;
+    }
+
+
+    .sound-btn {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0,0,0,0.65);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s;
+    }
+
+    .sound-btn:hover {
+      background: rgba(0,200,83,0.85);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transition: transform 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 100px 15px 80px;
+      }
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 2.2rem;
+      }
+      .btn {
+        padding: 14px 30px;
+        font-size: 1.1rem;
+      }
+      .video-frame {
+        max-width: 380px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <div class="logo">ONLYBROKERS</div>
+      <a href="https://start-broker-now.com/" class="btn btn-primary">Стать партнером</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Зарабатывай 3–5% на элитной недвижимости Пхукета<br>без вложений и звонков!</h1>
+      <p>Присоединяйся к ONLYBROKERS — самой простой реферальной системе в сфере недвижимости. Рекомендуй — получай крупные выплаты. Первый проект: Layan Green Park — эко-город в джунглях Пхукета.</p>
+      <div>
+        <a href="https://start-broker-now.com/" class="btn btn-primary">Зарегистрироваться бесплатно</a>
+        <a href="https://t.me/RU_5billionsales" class="btn btn-telegram" target="_blank">Чат поддержки в Telegram</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Почему партнеры выбирают ONLYBROKERS?</h2>
+      <div class="benefits">
+        <div class="benefit-card">
+          <div class="icon">₿</div>
+          <h3>0 ₽ вложений</h3>
+          <p>Полностью бесплатно — никаких стартовых платежей и скрытых комиссий.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">💰</div>
+          <h3>До 5% с каждой сделки</h3>
+          <p>3% — твоя прямая рекомендация + 1% + 1% от структуры. Реальные выплаты от 3000$ за сделку.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">🛋️</div>
+          <h3>Никакой работы</h3>
+          <p>Просто делись ссылкой. Всё остальное — звонки, документы, сделки — делают профессионалы.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">🌴</div>
+          <h3>Эксклюзив Пхукета</h3>
+          <p>Оптовые цены, скидки, рассрочка, мебель в подарок — условия, которых нет на открытом рынке.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="container">
+      <h2>Смотри, как строится Layan Green Park</h2>
+      <div class="video-frame">
+        <div class="video-wrapper">
+          <iframe 
+            id="yt-video"
+            src="https://www.youtube.com/embed/RR1yeWe5OQs?autoplay=1&mute=1&controls=0&loop=1&playlist=RR1yeWe5OQs" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <button id="sound-btn" class="sound-btn">🔊 ВКЛЮЧИТЬ ЗВУК</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Сколько ты можешь заработать?</h2>
+      <div class="calculator">
+        <label for="propertyPrice">Стоимость недвижимости (в USD):</label>
+        <input type="number" id="propertyPrice" class="calc-input" value="250000" min="50000" step="10000" placeholder="Введите стоимость объекта">
+
+        <label for="dealsCount">Количество закрытых сделок в месяц:</label>
+        <input type="number" id="dealsCount" class="calc-input" value="2" min="1" max="20">
+
+        <div class="calc-result" id="result">Твой потенциальный доход: <span id="income">15 000 $</span> / месяц</div>
+
+        <p style="text-align:center; color:#666; margin-top:20px;">Расчёт по 3% комиссии (без учета структуры). Реальный доход может быть выше!</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Layan Green Park — новый символ Пхукета</h2>
+      <div class="gallery">
+        <img src="https://cdn.fazwaz.com/wbr/5E8l5Xn72Wu_2MBsRWb6XUpJiew/375x300/project/140596/swimming-pool.jpg" alt="Бассейн Layan Green Park">
+        <img src="https://kellerhenson.com/wp-content/uploads/2024/07/Layan-Verde-Exteriors-5-1568x882.jpg" alt="Экстерьер Layan Green Park">
+        <img src="https://media.admiddleeast.com/photos/67d9558ecc05df43ac78bc5b/4:3/w_4000,h_3000,c_limit/19-Anantara_Layan_Residence_Drone_8731-Edit.jpg" alt="Джунгли и архитектура Пхукета">
+        <img src="https://img.lazudi.com/public/projects/14628/17032289009115.jpg?w=430&h=284&markalpha=30&fm=webp" alt="Современный комплекс в Лаяне">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>ONLYBROKERS — маркетинговые вознаграждения за привлечение клиентов в недвижимость.<br>Мы не брокеры, не принимаем деньги и не даём финансовых консультаций.</p>
+      <p style="margin-top:20px;">© 2026 ONLYBROKERS. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Калькулятор
+    const priceInput = document.getElementById('propertyPrice');
+    const dealsInput = document.getElementById('dealsCount');
+    const incomeSpan = document.getElementById('income');
+    const resultDiv = document.getElementById('result');
+
+    function calculate() {
+      const price = parseFloat(priceInput.value) || 0;
+      const deals = parseInt(dealsInput.value) || 0;
+      const commission = 0.03; // 3%
+      const monthly = price * commission * deals;
+      incomeSpan.textContent = monthly.toLocaleString('ru-RU') + ' $';
+    }
+
+    priceInput.addEventListener('input', calculate);
+    dealsInput.addEventListener('input', calculate);
+    calculate();
+
+    // Включение звука
+    const soundBtn = document.getElementById('sound-btn');
+    const video = document.getElementById('yt-video');
+
+    soundBtn.addEventListener('click', () => {
+      if (video.src.includes('mute=1')) {
+        video.src = video.src.replace('mute=1', 'mute=0');
+        soundBtn.textContent = '🔇 Выключить звук';
+      } else {
+        video.src = video.src.replace('mute=0', 'mute=1');
+        soundBtn.textContent = '🔊 Включить звук';
+      }
+    });
+  </script>
+</body>
+</html>
