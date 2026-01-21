@@ -184,17 +184,20 @@
     }
 
     .video-section {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
+     background: var(--dark);
+     color: white;
+     text-align: center;
+
+     min-height: 100vh;          /* ← ключ */
+     display: flex;
+     align-items: center;
+   }
 
     /* Video Container (9:16 Vertical) */
     .video-frame {
       position: relative;
       width: 100%;
-      padding-bottom: 177.77%;
+      padding-bottom: 160%;
       background: #000;
       border-radius: 16px;
       overflow: hidden;
