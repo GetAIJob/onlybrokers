@@ -190,17 +190,27 @@
       padding: 80px 20px;
     }
 
-    /* Video Container (9:16 Вертикальное) */
+   /* Контейнер видео */
     .video-frame {
       position: relative;
       width: 100%;
-      padding-bottom: 100%;
+      
+      /* 
+         1. Высота. 
+         Поставьте 130% или 120%. 
+         100% — это квадрат. 177% — это полный вертикальный экран.
+         125-135% — это золотая середина для Shorts на сайте.
+      */
+      padding-bottom: 160%;  
+      
       background: #000;
       border-radius: 16px;
-      overflow: hidden;
+      overflow: hidden; /* Это обрезает всё, что вылезет за края при зуме */
       margin-bottom: 25px;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-      max-width: 420px;
+      
+      /* Ширина самого блока */
+      max-width: 420px; 
       margin-left: auto;
       margin-right: auto;
     }
@@ -214,10 +224,14 @@
     }
 
     .video-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+     width: 100%;
+     height: 100%;
+     border: none;
+
+     transform: scale(1.18);
+     transform-origin: center center;
     }
+
 
     .sound-btn {
       position: absolute;
@@ -422,8 +436,4 @@
     });
   </script>
 </body>
-
 </html>
-
-
-
