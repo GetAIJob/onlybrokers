@@ -192,28 +192,16 @@
 
    /* Контейнер видео */
     .video-frame {
-      position: relative;
-      width: 100%;
-      
-      /* 
-         1. Высота. 
-         Поставьте 130% или 120%. 
-         100% — это квадрат. 177% — это полный вертикальный экран.
-         125-135% — это золотая середина для Shorts на сайте.
-      */
-      padding-bottom: 80%;  
-      
-      background: #000;
-      border-radius: 16px;
-      overflow: hidden; /* Это обрезает всё, что вылезет за края при зуме */
-      margin-bottom: 25px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-      
-      /* Ширина самого блока */
-      max-width: 420px; 
-      margin-left: auto;
-      margin-right: auto;
-    }
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 25px;
+
+  padding-bottom: 177.77%; /* 9:16 */
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+}
 
     .video-wrapper {
       position: absolute;
@@ -437,5 +425,6 @@
   </script>
 </body>
 </html>
+
 
 
