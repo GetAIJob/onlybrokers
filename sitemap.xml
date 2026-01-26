@@ -12,14 +12,43 @@
 
   <!-- Вариант /2/ (текущая оптимизированная страница) -->
   <url>
-    <loc>https://start-broker-now.com/</loc>
+    <loc>https://start-broker-now.com/2/</loc>
     <lastmod>2026-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Если в будущем появятся другие страницы, добавляй их сюда -->
-  <!-- Пример: -->
+ 
+ <url>
+    <loc><https://start-broker-now.com/en/</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://start-broker-now.com/2en/</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://start-broker-now.com/coming-soon/</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://start-broker-now.com/coming-soon-en/</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+    <!-- Пример: -->
   <!--
   <url>
     <loc>https://start-broker-now.com/privacy/</loc>
