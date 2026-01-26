@@ -2,419 +2,227 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>ONLYBROKERS: Real Estate Partner</title>
-  
-  <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONLYBROKERS — Earn 3–5% on Phuket Real Estate Without Investments!</title>
 
+  <!-- Основные SEO-мета -->
+  <meta name="description" content="Earn 3–5% on luxury Phuket real estate without investments! ONLYBROKERS — referral system with payouts from $3000. First project — Layan Green Park. Free.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://start-broker-now.com/en/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Earn 3–5% on Luxury Phuket Real Estate Without Investments!">
+  <meta property="og:description" content="Get real payouts from $3000 per deal. ONLYBROKERS — the simplest referral system. No investments, no calls, no contracts. First project: Layan Green Park. Join for free!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://start-broker-now.com/en/">
+  <meta property="og:site_name" content="ONLYBROKERS">
+  <meta property="og:image" content="https://cdn.fazwaz.com/wbr/5E8l5Xn72Wu_2MBsRWb6XUpJiew/1200x630/project/140596/swimming-pool-layan.jpg">
+  <meta property="og:image:secure_url" content="https://cdn.fazwaz.com/wbr/5E8l5Xn72Wu_2MBsRWb6XUpJiew/1200x630/project/140596/swimming-pool-layan.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Luxury pool and villas Layan Green Park — Phuket">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Earn 3–5% on Phuket Real Estate Without Investments!">
+  <meta name="twitter:description" content="Passive income from real estate referrals. Payouts from $3000. Free and simple. First project — Layan Green Park.">
+  <meta name="twitter:image" content="https://cdn.fazwaz.com/wbr/5E8l5Xn72Wu_2MBsRWb6XUpJiew/1200x630/project/140596/swimming-pool-layan.jpg">
+  <meta name="twitter:image:alt" content="Luxury Phuket real estate — Layan Green Park">
+  <meta name="twitter:site" content="@onlybrokers">
+  <meta name="twitter:creator" content="@onlybrokers">
+
+  <!-- Telegram / VK / Additional -->
+  <meta property="og:updated_time" content="2026-01-26T05:50:00+01:00">
+  <meta name="theme-color" content="#00c853">
+  <meta name="msapplication-TileColor" content="#00c853">
+
+  <!-- Performance boosters -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://i.ytimg.com">
+  <link rel="preload" as="image" href="https://cdn.fazwaz.com/wbr/5E8l5Xn72Wu_2MBsRWb6XUpJiew/375x300/project/140596/swimming-pool.jpg" fetchpriority="high">
+
+  <!-- Critical CSS (inline) -->
   <style>
-    /* Reset & Base Styles */
-    * { box-sizing: border-box; }
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0f172a; /* Dark background */
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #334155;
+    :root{--primary:#00c853;--primary-dark:#00a041;--dark:#0d1b2a;--gray:#f8f9fa;--text:#2d3436;--accent:#ff6b35}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:linear-gradient(135deg,#f0f7ff 0%,#e6f4ff 100%);line-height:1.6;-webkit-font-smoothing:antialiased}
+    .container{max-width:1200px;margin:0 auto;padding:0 16px}
+    header{background:linear-gradient(to right,var(--dark),#1b263b);color:#fff;padding:16px 0;position:sticky;top:0;z-index:100;box-shadow:0 4px 15px rgba(0,0,0,.15)}
+    .header-content{display:flex;justify-content:space-between;align-items:center}
+    .logo{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--primary)}
+    .hero{position:relative;color:#fff;text-align:center;padding:100px 16px 80px;background:#000}
+    .hero-bg{position:absolute;inset:0;object-fit:cover;object-position:center;z-index:0;opacity:.92}
+    .hero-content{position:relative;z-index:1}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,3.4rem);margin-bottom:.8rem;line-height:1.1}
+    .hero p{font-size:clamp(1.1rem,3vw,1.35rem);max-width:720px;margin:0 auto 2rem;opacity:.95}
+    .btn{display:inline-block;padding:14px 32px;font-size:1.15rem;font-weight:600;text-decoration:none;border-radius:50px;transition:all .25s ease;box-shadow:0 5px 18px rgba(0,0,0,.18);margin:10px}
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,200,83,.35)}
+    .btn-telegram{background:#0088cc;color:#fff}
+    .btn-telegram:hover{background:#006b9e;transform:translateY(-2px)}
+    section{padding:60px 0}
+    h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.6rem);text-align:center;margin-bottom:2rem;color:var(--dark)}
+    .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+    .benefit-card{background:#fff;border-radius:16px;padding:28px 20px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.07);transition:transform .25s}
+    .benefit-card:hover{transform:translateY(-8px)}
+    .benefit-card .icon{font-size:3.2rem;margin-bottom:1rem;color:var(--primary)}
+    .video-section{background:var(--dark);color:#fff;text-align:center;padding:60px 0}
+    .video-container{max-width:480px;margin:32px auto;position:relative;cursor:pointer}
+    .video-poster{position:relative;display:block;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+    .video-poster img{width:100%;height:auto;display:block}
+    .play-btn{position:absolute;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;font-size:5rem;color:#fff;transition:.2s}
+    .play-btn:hover{background:rgba(0,200,83,.6)}
+    .video-wrapper{display:none}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:32px}
+    .gallery img{width:100%;height:auto;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.12);transition:transform .3s}
+    .gallery img:hover{transform:scale(1.03)}
+    .calculator{background:#fff;border-radius:16px;padding:32px;max-width:540px;margin:0 auto;box-shadow:0 12px 35px rgba(0,0,0,.1)}
+    .calc-input{width:100%;padding:14px;font-size:1.25rem;border:2px solid #ddd;border-radius:10px;margin:12px 0;text-align:center}
+    .calc-result{font-size:2rem;font-weight:700;color:var(--primary);text-align:center;margin:20px 0;padding:16px;background:rgba(0,200,83,.08);border-radius:12px}
+    @media (max-width:768px){
+      .hero{padding:80px 16px 60px}
+      .btn{padding:12px 28px;font-size:1.05rem}
+      section{padding:40px 0}
     }
-
-    /* Mobile Container */
-    .mobile-container {
-      width: 100%;
-      max-width: 480px;
-      background: #ffffff;
-      min-height: 100vh;
-      padding: 25px 20px;
-      position: relative;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
-
-    @media (min-width: 481px) {
-      .mobile-container {
-        min-height: auto;
-        border-radius: 24px;
-        margin: 20px 0;
-      }
-    }
-
-    /* Badge */
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #DEF7EC;
-      color: #03543F;
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 13px;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .badge span {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      background: #22c55e;
-      border-radius: 50%;
-      margin-right: 6px;
-      animation: pulse-green 2s infinite;
-    }
-
-    /* Headings */
-    h1 {
-      font-size: 26px;
-      line-height: 1.2;
-      font-weight: 900;
-      margin: 0 0 10px 0;
-      color: #1e293b;
-    }
-
-    .highlight {
-      color: #0ea5a4; /* Teal / Brand Color */
-    }
-
-    .sub-highlight {
-      color: #d97706; /* Gold/Orange */
-      white-space: nowrap;
-      background: #fffbeb;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-
-    .subtitle {
-      font-size: 16px;
-      line-height: 1.5;
-      color: #64748b;
-      margin-bottom: 20px;
-    }
-
-    /* --- Video Styles (Fixed) --- */
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-bottom: 177.77%; /* 9:16 Aspect Ratio */
-      background: #000;
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 25px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Sound Button Overlay */
-    .sound-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(255, 255, 255, 0.9);
-      color: #000;
-      border: none;
-      padding: 15px 25px;
-      font-size: 16px;
-      font-weight: 800;
-      border-radius: 50px;
-      cursor: pointer;
-      z-index: 10;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-      animation: pulse-btn 2s infinite;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    @keyframes pulse-btn {
-      0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
-      70% { transform: translate(-50%, -50%) scale(1.05); box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
-      100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
-    }
-    /* --------------------------- */
-
-    /* Project Features Block */
-    .project-features {
-      background: #f0fdf4; 
-      border: 1px solid #bbf7d0;
-      border-radius: 12px;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      color: #166534;
-    }
-    
-    .feature-item span {
-      margin-right: 8px;
-      font-size: 18px;
-    }
-
-    /* Commission Box (UPDATED) */
-    .commission-box {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 25px;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    .commission-box h3 {
-      margin-top: 0;
-      color: #0f172a;
-      font-size: 18px;
-    }
-
-    .commission-step {
-      margin-bottom: 15px;
-      border-bottom: 1px dashed #cbd5e1;
-      padding-bottom: 10px;
-    }
-
-    .commission-step:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .income-highlight {
-      display: block;
-      font-weight: 800;
-      color: #16a34a; /* Green for money */
-      margin-top: 5px;
-      font-size: 17px;
-    }
-
-    /* Timer */
-    .timer-alert {
-      background: #FFFBEB;
-      border: 1px solid #FCD34D;
-      color: #92400E;
-      padding: 12px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    /* Buttons */
-    .cta-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 18px;
-      font-size: 18px;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 14px;
-      margin-bottom: 12px;
-      transition: transform 0.1s;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
-
-    .cta-button:active {
-      transform: scale(0.98);
-    }
-
-    .btn-main {
-      background: linear-gradient(to right, #0ea5a4, #0891b2);
-      color: white;
-      animation: pulse 2s infinite;
-      border: 1px solid transparent;
-    }
-
-    .btn-tg {
-      background: #ffffff;
-      color: #24A1DE;
-      border: 2px solid #24A1DE;
-    }
-
-    /* Footer */
-    .footer {
-      margin-top: 20px;
-      font-size: 12px;
-      color: #94a3b8;
-      text-align: center;
-      line-height: 1.4;
-    }
-
-    /* Animations */
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(14, 165, 164, 0.7); }
-      70% { box-shadow: 0 0 0 10px rgba(14, 165, 164, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(14, 165, 164, 0); }
-    }
-
-    @keyframes pulse-green {
-      0% { opacity: 1; }
-      50% { opacity: 0.4; }
-      100% { opacity: 1; }
-    }
+    .header-right {display: flex;align-items: center;gap: 16px;}
+    .lang-switch {display: flex;background: rgba(255,255,255,0.1);border-radius: 50px;padding: 4px;backdrop-filter: blur(4px);border: 1px solid rgba(255,255,255,0.15);}
+    .lang-btn {display: inline-block;padding: 8px 16px;font-size: 0.95rem;font-weight: 600;color: white;text-decoration: none;border-radius: 50px;transition: all 0.25s ease;}
+    .lang-btn:hover {background: rgba(255,255,255,0.15);}
+    .lang-active {background: var(--primary);color: white;box-shadow: 0 2px 8px rgba(0,200,83,0.4);}
+    @media (max-width: 768px) {.header-right {gap: 12px;}.lang-btn {padding: 6px 12px;font-size: 0.9rem;}.btn-primary {padding: 10px 20px;font-size: 0.95rem;}}
   </style>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+
+  <!-- Non-critical Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+</head>
 <body>
 
-  <div class="mobile-container">
-    
-    <!-- Trust Badge -->
-    <div style="text-align: center;">
-      <div class="badge">
-        <span></span> Pre-launch Access
+  <header>
+    <div class="container header-content">
+      <div class="logo">ONLYBROKERS</div>
+      
+      <div class="header-right">
+        <!-- Language switch -->
+        <div class="lang-switch">
+          <a href="https://start-broker-now.com/" class="lang-btn">RU</a>
+          <a href="https://start-broker-now.com/en/" class="lang-btn lang-active">EN</a>
+        </div>
+        
+        <a href="https://start-broker-now.com/" class="btn btn-primary">Become a Partner</a>
       </div>
     </div>
+  </header>
 
-    <h1>
-      Earn money on real estate in <span class="highlight">Thailand 🇹🇭 and the UAE 🇦🇪</span>
-    </h1>
-
-    <p class="subtitle">
-      Become a partner of <strong>ONLYBROKERS</strong>.<br>
-      Phuket (Layan Beach) • Dubai • <span class="sub-highlight">0$ Investment</span>
-    </p>
-
-    <!-- Project Features (Tailored for Phuket) -->
-    <div class="project-features">
-      <div style="font-weight:800; color:#0f172a; margin-bottom:10px;">🔥 Featured Project (Phuket):</div>
-      <div class="feature-item"><span>🌊</span> 800m to Layan Beach (Premium Area)</div>
-      <div class="feature-item"><span>🌿</span> Eco-Luxury & Smart Home</div>
-      <div class="feature-item"><span>📈</span> High Rental Yield Potential</div>
-      <div class="feature-item"><span>💎</span> Pre-sale Prices Available Now</div>
-    </div>
-
-     <!-- Видео -->
-    <div class="video-wrapper">
-      <iframe
-        id="yt-video"
-        src="https://www.youtube.com/embed/-IyBKpQavn4?autoplay=1&mute=1&controls=0&loop=1&playlist=-IyBKpQavn4&playsinline=1&rel=0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
-
-      <button id="sound-btn" class="sound-btn">
-        🔊 TURN ON THE SOUND
-      </button>
-    </div>
-
-    <!-- Commission Calculation (UPDATED 3 LEVELS) -->
-    <div class="commission-box">
-      <h3>💸 How much can you earn?</h3>
-      <p style="margin-top: 0; font-size: 14px; color: #64748b;">
-        Based on a starting unit price of approx. <strong>$200,000</strong> (Phuket).
-      </p>
-
-      <!-- Level 1 -->
-      <div class="commission-step">
-        <strong>1️⃣ Direct Sale (3%)</strong><br>
-        You find a buyer for a studio or 1-bedroom unit.
-        <span class="income-highlight">💰 Your Commission: $6,000</span>
-      </div>
-
-      <!-- Level 2 -->
-      <div class="commission-step">
-        <strong>2️⃣ Team Override - Level 1 (1%)</strong><br>
-        Your referral makes a sale. You do nothing.
-        <span class="income-highlight">💰 Passive Income: $2,000</span>
-      </div>
-
-      <!-- Level 3 -->
-      <div class="commission-step">
-        <strong>3️⃣ Team Override - Level 2 (1%)</strong><br>
-        Your referral makes a sale. You do nothing.
-        <span class="income-highlight">💰 Passive Income: $2,000</span>
-      </div>
-
-      <div style="background: #ecfdf5; padding: 10px; border-radius: 6px; font-size: 14px; margin-top: 10px; border-left: 3px solid #10b981;">
-        <strong>🚀 The Opportunity:</strong><br>
-        Investors are flocking to Thailand. Digital Nomads want to buy homes. Be the bridge and get paid.
+  <section class="hero">
+    <img class="hero-bg" src="https://cdn.fazwaz.com/wbr/5E8l5Xn72Wu_2MBsRWb6XUpJiew/375x300/project/140596/swimming-pool.jpg" alt="" fetchpriority="high" loading="eager">
+    <div class="container hero-content">
+      <h1>Earn 3–5% on Luxury Phuket Real Estate<br>Without Investments and Calls!</h1>
+      <p>Join ONLYBROKERS — the simplest referral system in real estate. Recommend — get big payouts. First project: Layan Green Park.</p>
+      <div>
+        <a href="https://start-broker-now.com/" class="btn btn-primary">Register for Free</a>
+        <a href="https://t.me/OnPassive_EN" class="btn btn-telegram" target="_blank" rel="noopener">Support Chat in Telegram</a>
       </div>
     </div>
+  </section>
 
-    <!-- Timer -->
-    <div class="timer-alert">
-      ⏳ Broker registration closes in: <span id="timer">14:59</span>
+  <section>
+    <div class="container">
+      <h2>Why Partners Choose ONLYBROKERS?</h2>
+      <div class="benefits">
+        <div class="benefit-card"><div class="icon">₿</div><h3>0 ₽ Investments</h3><p>Completely free — no startup payments or hidden fees.</p></div>
+        <div class="benefit-card"><div class="icon">💰</div><h3>Up to 5% per Deal</h3><p>Real payouts from $3000 per deal.</p></div>
+        <div class="benefit-card"><div class="icon">🛋️</div><h3>No Work Required</h3><p>Just share the link — professionals handle calls, documents, and deals.</p></div>
+        <div class="benefit-card"><div class="icon">🌴</div><h3>Phuket Exclusive</h3><p>Wholesale prices, discounts, installments, furniture as a gift.</p></div>
+      </div>
     </div>
+  </section>
 
-    <!-- Buttons -->
-    <a href="https://onlybrokers.com/registration?ref=smanolii%40gmail.com" class="cta-button btn-main">
-      👉 Start Earning (Free Join)
-    </a>
-
-    <a href="https://t.me/OnPassive_EN" target="_blank" class="cta-button btn-tg">
-      💬 Join Telegram Community
-    </a>
-
-    <div class="footer">
-      <p>ONLYBROKERS International.<br>
-      Phuket • Dubai • Bali<br>
-      &copy; 2026 All Rights Reserved.</p>
+  <section class="video-section">
+    <div class="container">
+      <h2>Watch How Layan Green Park is Being Built</h2>
+      <div class="video-container" data-video="RR1yeWe5OQs">
+        <div class="video-poster">
+          <img src="https://i.ytimg.com/vi/RR1yeWe5OQs/maxresdefault.jpg" alt="Layan Green Park construction" loading="lazy" decoding="async">
+          <div class="play-btn">▶</div>
+        </div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/RR1yeWe5OQs?autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <section>
+    <div class="container">
+      <h2>How Much Can You Earn?</h2>
+      <div class="calculator">
+        <label for="propertyPrice">Real Estate Cost (USD):</label>
+        <input type="number" id="propertyPrice" class="calc-input" value="250000" min="50000" step="10000">
+        <label for="dealsCount">Deals per Month:</label>
+        <input type="number" id="dealsCount" class="calc-input" value="2" min="1" max="20">
+        <div class="calc-result">Your Income: <span id="income">15 000 $</span> / month</div>
+        <p style="text-align:center;color:#666;margin-top:16px;">Calculated at 3% (real can be higher)</p>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    /* Timer Logic */
-    function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-        var interval = setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+  <section>
+    <div class="container">
+      <h2>Layan Green Park — New Symbol of Phuket</h2>
+      <div class="gallery">
+        <img src="https://cdn.fazwaz.com/wbr/5E8l5Xn72Wu_2MBsRWb6XUpJiew/375x300/project/140596/swimming-pool.jpg" alt="Pool" loading="lazy" decoding="async">
+        <img src="https://kellerhenson.com/wp-content/uploads/2024/07/Layan-Verde-Exteriors-5-1568x882.jpg" alt="Exterior" loading="lazy" decoding="async">
+        <img src="https://media.admiddleeast.com/photos/67d9558ecc05df43ac78bc5b/4:3/w_4000,h_3000,c_limit/19-Anantara_Layan_Residence_Drone_8731-Edit.jpg" alt="Jungles" loading="lazy" decoding="async">
+        <img src="https://img.lazudi.com/public/projects/14628/17032289009115.jpg?w=430&h=284&markalpha=30&fm=webp" alt="Complex" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
 
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
+  <footer>
+    <div class="container">
+      <p>ONLYBROKERS — marketing rewards for attracting clients in real estate.<br>We are not brokers and do not provide financial advice.</p>
+      <p style="margin-top:16px;">© 2026 ONLYBROKERS. All rights reserved.</p>
+    </div>
+  </footer>
 
-            display.textContent = minutes + ":" + seconds;
-
-            if (--timer < 0) {
-                timer = 0; 
-                clearInterval(interval);
-                display.textContent = "00:00";
-            }
-        }, 1000);
+  <!-- Non-critical JS (defer) -->
+  <script defer>
+    // Calculator with debounce (English locale)
+    const price = document.getElementById('propertyPrice');
+    const deals = document.getElementById('dealsCount');
+    const income = document.getElementById('income');
+    let timeout;
+    function calc() {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const p = +price.value || 0;
+        const d = +deals.value || 0;
+        income.textContent = (p * 0.03 * d).toLocaleString('en-US') + ' $';
+      }, 300);
     }
+    price.addEventListener('input', calc);
+    deals.addEventListener('input', calc);
+    calc();
 
-    window.onload = function () {
-        var fifteenMinutes = 60 * 15,
-            display = document.querySelector('#timer');
-        startTimer(fifteenMinutes, display);
-    };
+    // Lite YouTube
+    document.querySelectorAll('.video-container').forEach(cont => {
+      cont.addEventListener('click', () => {
+        const id = cont.dataset.video;
+        const wrapper = cont.querySelector('.video-wrapper');
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+        iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        wrapper.innerHTML = '';
+        wrapper.appendChild(iframe);
+        wrapper.style.display = 'block';
+        cont.querySelector('.video-poster').style.display = 'none';
+      }, {once: true});
+    });
   </script>
-  
-   <script>
-  /* Sound Button Logic */
-  document.getElementById("sound-btn").addEventListener("click", function () {
-    const iframe = document.getElementById("yt-video");
-
-    // Вставьте сюда ID вашего видео вместо ВАШ_ID_ВИДЕО (два раза!)
-    iframe.src = "https://www.youtube.com/embed/-IyBKpQavn4?autoplay=1&mute=0&controls=1&loop=1&playlist=-IyBKpQavn4&playsinline=1&rel=0";
-
-    this.style.display = "none";
-  });
-</script>
-
 </body>
 </html>
