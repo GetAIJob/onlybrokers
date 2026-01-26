@@ -1,0 +1,45 @@
+# _config.yml для Cloudflare Pages (Jekyll-совместимый конфиг)
+
+# Основные настройки сайта
+title: ONLYBROKERS — Зарабатывай на недвижимости Пхукета без вложений
+description: Партнерская программа ONLYBROKERS. Получай 3–5% от сделок с элитной недвижимостью Пхукета. Без вложений, без звонков, без контрактов.
+baseurl: ""                    # Оставь пустым для корневого домена
+url: "https://start-broker-now.com"
+
+# Дополнительные SEO-метаданные (можно использовать в шаблонах, если перейдёшь на Jekyll)
+author: ONLYBROKERS
+lang: ru
+
+# Даты и время
+timezone: Europe/Brussels
+
+# Плагины (Cloudflare Pages поддерживает минимальный набор)
+plugins:
+  - jekyll-sitemap          # Автоматически генерирует sitemap.xml (если используешь Jekyll)
+  - jekyll-seo-tag          # Добавляет meta-теги автоматически (если перейдёшь на полноценный Jekyll)
+
+# Настройки sitemap (если используешь jekyll-sitemap)
+sitemap:
+  changefreq: weekly
+  priority: 1.0
+  filename: sitemap.xml
+
+# Исключить ненужные файлы из сборки
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+
+# По умолчанию главная страница
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default          # Если в будущем добавишь _layouts/default.html
+      permalink: /:path/       # Чистые URL без .html
+
+# Если не используешь Jekyll — этот файл всё равно полезен, Cloudflare его увидит
