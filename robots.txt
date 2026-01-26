@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию ненужных параметров (очень полезно для CPC-трафика, UTM-меток, редиректов)
+Disallow: /*?
+Disallow: /*utm_*
+Disallow: /*fbclid=*
+Disallow: /*gclid=*
+Disallow: /*ref=*
+
+# Запрещаем служебные страницы Cloudflare Pages (если они есть)
+Disallow: /404.html
+Disallow: /500.html
+
+# Sitemap (обязательно указываем полный URL)
+Sitemap: https://start-broker-now.com/sitemap.xml
+
+# Опционально: ограничение скорости сканирования для агрессивных ботов
+# Crawl-delay: 10
