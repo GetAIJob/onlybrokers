@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Запрещаем параметры и служебные пути
+Disallow: /*?
+Disallow: /*utm_*
+Disallow: /*fbclid=*
+Disallow: /*gclid=*
+Disallow: /*ref=*
+Disallow: /admin/
+Disallow: /test/
+Disallow: /draft/
+Disallow: /_*
+
+# Разрешаем главную страницу и важные подстраницы
+Allow: /2en/
+Allow: /thanks.html  # если есть
+
+# Sitemap (если есть)
+Sitemap: https://start-broker-now.com/sitemap.xml
