@@ -2,60 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- 1. https://start-broker-now.com/2/ (RU версия лендинга) -->
+  <!-- Главная страница -->
+  <url>
+    <loc>https://start-broker-now.com/</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Вариант /2/ (текущая оптимизированная страница) -->
   <url>
     <loc>https://start-broker-now.com/2/</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-01-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://start-broker-now.com/2/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://start-broker-now.com/2en/"/>
+    <priority>0.9</priority>
   </url>
 
-  <!-- 2. https://start-broker-now.com/2en/ (EN версия лендинга) -->
+  <!-- Если в будущем появятся другие страницы, добавляй их сюда -->
+ 
+ <url>
+    <loc>https://start-broker-now.com/en/</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <url>
     <loc>https://start-broker-now.com/2en/</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-01-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://start-broker-now.com/2en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://start-broker-now.com/2/"/>
+    <priority>0.9</priority>
   </url>
 
-  <!-- 3. https://prime-asset-global.com/ru (RU версия сайта) -->
   <url>
-    <loc>https://prime-asset-global.com/ru/</loc>
-    <lastmod>2026-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://prime-asset-global.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://prime-asset-global.com/"/>
-  </url>
-
-  <!-- Дополнительные важные страницы (рекомендую добавить) -->
-  <!-- Главная EN версия prime-asset-global.com -->
-  <url>
-    <loc>https://prime-asset-global.com/</loc>
-    <lastmod>2026-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://prime-asset-global.com/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://prime-asset-global.com/ru/"/>
-  </url>
-
-  <!-- Thanks страницы (если они есть и важны для индексации) -->
-  <url>
-    <loc>https://prime-asset-global.com/thanks.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://start-broker-now.com/coming-soon/</loc>
+    <lastmod>2026-01-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://prime-asset-global.com/ru/thanks.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://start-broker-now.com/coming-soon-en/</loc>
+    <lastmod>2026-01-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
+  
+    <!-- Пример: -->
+  <!--
+  <url>
+    <loc>https://start-broker-now.com/privacy/</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  -->
 
 </urlset>
